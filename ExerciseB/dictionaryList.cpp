@@ -208,10 +208,49 @@ void DictionaryList::destroy()
 // point to the twin of whatever the source's cursor points to.
 void DictionaryList::copy(const DictionaryList& source)
 {
-  
-  cout << "\nDictionaryList::copy is not implemented properly,\n"
-       << "so the program is calling exit.\n";
-  exit(1);
+    //If making a copy of an empty list
+    if(source.headM == nullptr) {
+        headM = cursorM = nullptr;
+        sizeM = 0;
+        return;
+    }
+    
+    // Copy head first
+    headM = new Node(source.headM->keyM, source.headM->datumM, nullptr);
+    // Set up two Node pointers
+    Node* currentSourceNode = source.headM->nextM;
+    Node* newNode = headM;
+    
+    // Loop until reaching end of source
+    while(currentSourceNode != nullptr) {
+        // Create new node and set to nextM
+        newNode->nextM = new Node(currentSourceNode->keyM, currentSourceNode->datumM, nullptr);
+        // Increment current node
+        currentSourceNode = currentSourceNode->nextM;
+        // Increment previous node
+        newNode = newNode->nextM;
+    }
+    // Copying now complete
+    // Update size
+    sizeM = source.sizeM;
+    
+    // Set cursor to point to the twin of source's cursor
+    if(source.cursorM == nullptr) {
+        cursorM = nullptr;
+    } else {
+        //Reset both cursors
+        cursorM = headM;
+        currentSourceNode = source.headM;
+        //Loop till end of list instead of until value matches to avoid potential infinite loop
+        while(currentSourceNode != nullptr) {
+            if(source.cursorM == currentSourceNode) {
+                //Exit function when cursorM is pointing to the correct node
+                return;
+            }
+            cursorM = cursorM->nextM;
+            currentSourceNode = currentSourceNode->nextM;
+        }
+    }
 }
 
 

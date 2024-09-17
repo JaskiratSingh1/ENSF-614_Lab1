@@ -21,7 +21,7 @@ int main()
   test_copying();
     
  // Uncomment the call to test_copying when DictionaryList::copy is properly defined
- // test_finding(dl);
+  test_finding(dl);
   
   return 0;
 }

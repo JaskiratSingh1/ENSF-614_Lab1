@@ -133,7 +133,7 @@ void DictionaryList::remove(const int& keyA)
             before->nextM = maybe_doomed->nextM;
         }
         
-        
+
     } 
     if(doomed_node == cursorM)
         cursorM = 0;
@@ -191,9 +191,17 @@ void DictionaryList::find(const Key& keyA)
 // Deallocate all nodes, set headM to zero.
 void DictionaryList::destroy()
 {
-  cout << "\nWARNING: DictionaryList::destroy() is abandoning nodes\n"
-       << "when it should be deleting them!\n";
-  headM = 0;
+    // Loop until all nodes are destroyed
+    while(headM != nullptr){
+        //Set cursor to head
+        cursorM = headM;
+        //Set head to next node
+        headM = headM->nextM;
+        //Delete cursor node
+        delete cursorM;
+    }
+    // set cursor and head to null
+    headM = cursorM = nullptr;
 }
 
 // Establishes *this as a copy of source.  Cursor of *this will

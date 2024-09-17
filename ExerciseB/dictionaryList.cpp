@@ -173,9 +173,19 @@ void DictionaryList::make_empty()
 //   the off-list state.
 void DictionaryList::find(const Key& keyA)
 {
-  cout << "\nDon't know how to find " << keyA << " (or any other key).\n";
-  cout << "... so exit is being called.\n";
-  exit(1);
+    // Set cursor to head
+    cursorM = headM;
+    // Loop until reaching the end
+    while(cursorM != nullptr){
+        // Check if current node's key matches keyA
+        if(cursorM->keyM == keyA) {
+            return;
+        }
+        //Increment node
+        cursorM = cursorM->nextM;
+    }
+    //Unable to find key in list, set cursor to null
+    cursorM = nullptr;
 }
 
 // Deallocate all nodes, set headM to zero.

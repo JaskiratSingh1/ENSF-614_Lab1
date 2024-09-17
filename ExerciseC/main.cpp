@@ -35,22 +35,35 @@ private:
     string address;
     string dateOfBirth;
 public:
+    // Ctor
     Person(const string& name, const string& address, const string& dateOfBirth):
         name(name), address(address), dateOfBirth(dateOfBirth) {}
     
-    //Getters
+    // Getters
     string getName() const { return name; }
     string getAddress() const { return address; }
     string getDateOfBirth() const { return dateOfBirth; }
     
-    //Setters
+    // Setters
     void setName(const string& name) { this->name = name; }
     void setAddress(const string& address) { this->address = address; }
     void setDateOfBirth(const string& dateOfBirth) { this->dateOfBirth = dateOfBirth; }
 };
 
 class Employee : public Person {
+private:
+    string employeeState;
     
+public:
+    // Ctor
+    Employee(const string& name, const string& address, const string& dateOfBirth, const string& employeeState):
+        Person(name, address, dateOfBirth), employeeState(employeeState) {}
+    
+    // Getter
+    string getEmployeeState() const { return employeeState; }
+    
+    // Setter
+    void setEmployeeState(const string& employeeState) { this->employeeState = employeeState; }
 };
 
 class Customers : public Person {

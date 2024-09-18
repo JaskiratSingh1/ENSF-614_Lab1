@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D336B542C9A40030012C49D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D336B532C9A3FFD0012C49D /* main.cpp */; };
 		2D6D19BC2C94BA9300F9D620 /* mystring.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D19BA2C94BA9300F9D620 /* mystring.cpp */; };
 		2D6D19C02C94BC2800F9D620 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D19BF2C94BC2800F9D620 /* main.cpp */; };
 		2D6D19D02C94BDE700F9D620 /* dictionaryList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D19CD2C94BDE700F9D620 /* dictionaryList.cpp */; };
 		2D6D19D12C94BDE700F9D620 /* mystring_B.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D19CF2C94BDE700F9D620 /* mystring_B.cpp */; };
 		2D6D19D32C94BDFC00F9D620 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D19D22C94BDFC00F9D620 /* main.cpp */; };
 		2D6D19DB2C94BE3B00F9D620 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D19DA2C94BE3B00F9D620 /* main.cpp */; };
-		2D6D19E62C94BEB400F9D620 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D19E52C94BEB400F9D620 /* main.cpp */; };
-		2D6D19EB2C94BEC700F9D620 /* human_program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D19EA2C94BEC700F9D620 /* human_program.cpp */; };
+		2D7B09A02C9A193100DC9285 /* Human.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B099F2C9A193100DC9285 /* Human.cpp */; };
+		2D7B09A32C9A194500DC9285 /* Point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B09A22C9A194500DC9285 /* Point.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -66,6 +67,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2D336B512C9A3F600012C49D /* Human.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Human.h; sourceTree = "<group>"; };
+		2D336B522C9A3F6D0012C49D /* Point.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Point.h; sourceTree = "<group>"; };
+		2D336B532C9A3FFD0012C49D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		2D6D19B12C94BA5600F9D620 /* ExerciseA */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ExerciseA; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D6D19B92C94BA9300F9D620 /* mystring.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mystring.h; sourceTree = "<group>"; };
 		2D6D19BA2C94BA9300F9D620 /* mystring.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mystring.cpp; sourceTree = "<group>"; };
@@ -79,8 +83,8 @@
 		2D6D19D82C94BE3B00F9D620 /* ExerciseC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ExerciseC; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D6D19DA2C94BE3B00F9D620 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		2D6D19E32C94BEB400F9D620 /* ExerciseD */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ExerciseD; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D6D19E52C94BEB400F9D620 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		2D6D19EA2C94BEC700F9D620 /* human_program.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = human_program.cpp; sourceTree = "<group>"; };
+		2D7B099F2C9A193100DC9285 /* Human.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Human.cpp; sourceTree = "<group>"; };
+		2D7B09A22C9A194500DC9285 /* Point.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Point.cpp; sourceTree = "<group>"; };
 		2D82A3C42C93806000072C27 /* ENSF-614_Lab1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ENSF-614_Lab1"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -156,8 +160,11 @@
 		2D6D19E42C94BEB400F9D620 /* ExerciseD */ = {
 			isa = PBXGroup;
 			children = (
-				2D6D19EA2C94BEC700F9D620 /* human_program.cpp */,
-				2D6D19E52C94BEB400F9D620 /* main.cpp */,
+				2D336B522C9A3F6D0012C49D /* Point.h */,
+				2D336B512C9A3F600012C49D /* Human.h */,
+				2D7B09A22C9A194500DC9285 /* Point.cpp */,
+				2D7B099F2C9A193100DC9285 /* Human.cpp */,
+				2D336B532C9A3FFD0012C49D /* main.cpp */,
 			);
 			path = ExerciseD;
 			sourceTree = "<group>";
@@ -353,8 +360,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D6D19EB2C94BEC700F9D620 /* human_program.cpp in Sources */,
-				2D6D19E62C94BEB400F9D620 /* main.cpp in Sources */,
+				2D7B09A32C9A194500DC9285 /* Point.cpp in Sources */,
+				2D336B542C9A40030012C49D /* main.cpp in Sources */,
+				2D7B09A02C9A193100DC9285 /* Human.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
